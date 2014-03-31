@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle version="6.4">
+<drawing>
+<settings>
+<setting alwaysvectorfont="no"/>
+<setting verticaltext="up"/>
+</settings>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<layers>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
+<layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
+<layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
+<layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
+<layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
+<layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="93" name="Pins" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="94" name="Symbols" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="95" name="Names" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+</layers>
+<library>
+<description>This library is mainly documentation-oriented, i.e. contains only symbols. It is meant for drawing automotive schematics.</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="SCREW_TERMINAL">
+<description>Screw terminal, the half with the screw or into which the screw threads</description>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle" direction="sup"/>
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
+<wire x1="0" y1="3.81" x2="0" y2="-3.81" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<text x="-10.16" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="RING_TERMINAL">
+<description>Screw terminal, the half with the ring terminal that goes on the screw</description>
+<pin name="P$1" x="7.62" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<wire x1="0" y1="3.175" x2="0" y2="-3.175" width="0.254" layer="94" curve="-180"/>
+<text x="2.54" y="2.54" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="SPADEF_TERMINAL">
+<description>Spade terminal, female part (the one into which the spade goes)</description>
+<pin name="P$1" x="-10.16" y="0" visible="off" length="middle" direction="sup"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.905" x2="0" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-1.905" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<text x="0" y="5.08" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+</symbol>
+<symbol name="SPADEM_TERMINAL">
+<description>Spade terminal, male (the actual spade)</description>
+<pin name="P$1" x="10.16" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<wire x1="5.08" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0.635" y1="-1.27" x2="0" y2="-0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-0.635" x2="0" y2="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="0.635" x2="0.635" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0.635" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="1.27" y1="1.27" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.254" layer="94"/>
+<text x="10.16" y="5.08" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+</symbol>
+<symbol name="SPADE_1WAY">
+<description>1-way .250" spade connector housing</description>
+<wire x1="15.24" y1="-6.985" x2="0" y2="-6.985" width="0.254" layer="94"/>
+<wire x1="0" y1="-6.985" x2="0" y2="-5.715" width="0.254" layer="94"/>
+<wire x1="0" y1="5.715" x2="0" y2="6.985" width="0.254" layer="94"/>
+<wire x1="0" y1="6.985" x2="15.24" y2="6.985" width="0.254" layer="94"/>
+<wire x1="15.24" y1="6.985" x2="15.24" y2="-6.985" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.715" x2="-15.24" y2="-5.715" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-5.715" x2="-15.24" y2="5.715" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="5.715" x2="0" y2="5.715" width="0.254" layer="94"/>
+<wire x1="0" y1="5.715" x2="0" y2="-5.715" width="0.254" layer="94"/>
+</symbol>
+<symbol name="RELAY_COIL">
+<description>Generic relay coil (winding only)</description>
+<wire x1="-5.08" y1="2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="-7.62" visible="off" length="middle" direction="sup" rot="R90"/>
+<pin name="P$2" x="0" y="7.62" visible="off" length="middle" direction="sup" rot="R270"/>
+<wire x1="-3.81" y1="-2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<text x="-2.54" y="5.08" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<text x="-12.7" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="SWITCH_NO">
+<description>Generic normally open switch</description>
+<pin name="P$1" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+<pin name="P$2" x="0" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<circle x="0" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<circle x="0" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="7.62" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+</symbol>
+<symbol name="SWITCH_NC">
+<description>Generic normally closed switch</description>
+<pin name="P$1" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+<pin name="P$2" x="0" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<circle x="0" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<circle x="0" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-1.905" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="7.62" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+</symbol>
+<symbol name="MALE_CONNECTOR">
+<description>Generic male connector</description>
+<pin name="P$1" x="5.08" y="0" visible="off" length="middle" direction="nc" rot="R180"/>
+<circle x="0" y="0" radius="0.635" width="1.27" layer="94"/>
+<wire x1="-3.81" y1="0" x2="0" y2="0" width="1.27" layer="94"/>
+</symbol>
+<symbol name="MOTOR">
+<description>Generic motor symbol</description>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle" direction="sup"/>
+<pin name="P$2" x="7.62" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<circle x="0" y="0" radius="3.5921" width="0.254" layer="94"/>
+<text x="-1.778" y="-2.54" size="5.08" layer="94">M</text>
+<text x="-2.54" y="5.08" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="SWITCH_4WAY">
+<description>Generic, single pole, quadruple throw switch</description>
+<pin name="P$1" x="-7.62" y="0" visible="off" length="middle" direction="sup"/>
+<pin name="P$2" x="10.16" y="-2.54" visible="off" length="middle" direction="sup" rot="R180"/>
+<circle x="-2.54" y="0" radius="0.635" width="0.254" layer="94"/>
+<circle x="5.08" y="-2.54" radius="0.635" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<text x="2.54" y="5.08" size="1.778" layer="95" rot="R180">&gt;NAME</text>
+<text x="-5.08" y="-7.62" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="P$3" x="10.16" y="-5.08" visible="off" length="middle" direction="sup" rot="R180"/>
+<pin name="P$4" x="10.16" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<pin name="P$5" x="10.16" y="2.54" visible="off" length="middle" direction="sup" rot="R180"/>
+<circle x="5.08" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<circle x="5.08" y="0" radius="0.635" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<circle x="5.08" y="2.54" radius="0.635" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="1.905" y2="2.54" width="0.254" layer="94"/>
+</symbol>
+<symbol name="LAMP">
+<description>Generic indicator lamp, also usable for generic incandescent ligthing fixtures.</description>
+<circle x="0" y="0" radius="5.08" width="0.254" layer="94"/>
+<wire x1="-3.58775" y1="-3.58775" x2="3.58775" y2="3.58775" width="0.254" layer="94"/>
+<wire x1="-3.58775" y1="3.58775" x2="3.58775" y2="-3.58775" width="0.254" layer="94"/>
+<pin name="P$1" x="-10.16" y="0" visible="off" length="middle" direction="sup"/>
+<pin name="P$2" x="10.16" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<text x="-5.08" y="-7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="7.62" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+</symbol>
+<symbol name="3PHASE_ALTERNATOR">
+<description>3-Phase Alternator as commonly found on cars and motorcycles (stator only)</description>
+<circle x="0" y="0" radius="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94" curve="-180"/>
+<text x="-2.54" y="-2.286" size="7.62" layer="94" ratio="15">G</text>
+<wire x1="2.54" y1="-5.08" x2="0" y2="-5.08" width="0.254" layer="94" curve="-180"/>
+<pin name="P$1" x="-12.7" y="0" visible="off" length="middle" direction="sup"/>
+<pin name="P$2" x="-12.7" y="-5.08" visible="off" direction="sup"/>
+<pin name="P$3" x="-12.7" y="5.08" visible="off" direction="sup"/>
+<text x="-5.08" y="-10.16" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="DC_GENERATOR">
+<description>Integrated 3-Phase Alternator + Rectifier + Regulator, as common in cars.</description>
+<circle x="0" y="0" radius="7.62" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.286" size="7.62" layer="94" ratio="15">G</text>
+<pin name="L" x="-22.86" y="0" visible="pin" length="middle" direction="sup"/>
+<pin name="F" x="-22.86" y="-5.08" visible="pin" length="middle" direction="sup"/>
+<pin name="B+" x="-22.86" y="5.08" visible="pin" length="middle" direction="sup"/>
+<text x="-17.78" y="-10.16" size="1.778" layer="95">&gt;NAME</text>
+<wire x1="-2.54" y1="-4.064" x2="2.54" y2="-4.064" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94" style="shortdash"/>
+<wire x1="-17.78" y1="7.62" x2="-17.78" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-7.62" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-3.81" x2="-10.16" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-11.43" y1="1.27" x2="-10.16" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="1.27" x2="-8.89" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="1.27" x2="-10.16" y2="3.81" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="-11.43" y="-1.27"/>
+<vertex x="-8.89" y="-1.27"/>
+<vertex x="-10.16" y="1.27"/>
+</polygon>
+</symbol>
+<symbol name="SWITCH_KEY">
+<description>Generic key-operated switch</description>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-2.54" x2="1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="0.762" y2="-1.016" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-1.016" x2="-1.27" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="7.62" y2="0" width="0.254" layer="94" style="shortdash"/>
+</symbol>
+<symbol name="SWITCH_SPST">
+<description>Generic SPST switch</description>
+<circle x="0" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<circle x="0" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.905" x2="2.54" y2="-1.905" width="0.254" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<circle x="-2.54" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-1.905" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+<pin name="P$2" x="0" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<pin name="P$3" x="-2.54" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+</symbol>
+<symbol name="SWITCH_SPDT">
+<description>Generic SPDT switch, as used on the signa indicator control.</description>
+<circle x="0" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<circle x="2.54" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-1.905" width="0.254" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="5.08" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<circle x="-2.54" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-1.905" width="0.254" layer="94"/>
+<pin name="P$1" x="-2.54" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<pin name="P$2" x="2.54" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<pin name="P$3" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+</symbol>
+<symbol name="SWITCH_SPTT">
+<description>Generic SPTT switch, as used on the master lights switch on motorcycles.</description>
+<circle x="0" y="5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="5.08" x2="1.905" y2="-2.54" width="0.254" layer="94"/>
+<circle x="0" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="0" y1="-5.08" x2="0" y2="-2.54" width="0.254" layer="94"/>
+<text x="-5.08" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="7.62" y="-2.54" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<circle x="-2.54" y="-5.08" radius="0.635" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+<pin name="P$2" x="0" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<pin name="P$3" x="-2.54" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<wire x1="2.032" y1="-2.54" x2="3.556" y2="-2.032" width="0.254" layer="94"/>
+</symbol>
+<symbol name="RELAY_TIME">
+<description>Generic time relay, as used in automotive signal indicators.</description>
+<wire x1="-5.08" y1="2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="3.81" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="5.08" y1="0" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-3.81" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-3.81" y1="-2.54" x2="3.81" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="0" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="10.16" width="0.254" layer="94"/>
+<wire x1="0" y1="10.16" x2="2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="5.08" y1="7.62" x2="5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="5.08" y1="8.89" x2="7.62" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="8.89" x2="-7.62" y2="8.89" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="8.89" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-5.08" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="8.89" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="7.62" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+</symbol>
+<symbol name="3PHASE_RECTIFIER">
+<description>Generic 3-phase AC to DC rectifier</description>
+<pin name="P$1" x="7.62" y="5.08" visible="off" length="middle" direction="sup" rot="R180"/>
+<pin name="P$2" x="7.62" y="0" visible="off" length="middle" direction="sup" rot="R180"/>
+<pin name="P$3" x="7.62" y="-5.08" visible="off" length="middle" direction="sup" rot="R180"/>
+<wire x1="-1.27" y1="-3.81" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="1.27" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="-1.27" y2="3.81" width="0.254" layer="94"/>
+<polygon width="0.254" layer="94">
+<vertex x="-2.54" y="-1.27"/>
+<vertex x="0" y="-1.27"/>
+<vertex x="-1.27" y="1.27"/>
+</polygon>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<text x="-5.08" y="-10.16" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.08" y="10.16" size="1.778" layer="96" rot="R180">&gt;VALUE</text>
+</symbol>
+<symbol name="DC_REGULATOR">
+<description>Generic internal-reference DC regulator</description>
+<circle x="0" y="0" radius="5.6796125" width="0.254" layer="94"/>
+<pin name="P$1" x="0" y="10.16" visible="off" length="middle" direction="sup" rot="R270"/>
+<pin name="P$2" x="0" y="-10.16" visible="off" length="middle" direction="sup" rot="R90"/>
+<wire x1="0" y1="2.032" x2="0" y2="4.572" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="3.302" x2="1.27" y2="3.302" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-3.81" x2="1.27" y2="-3.81" width="0.254" layer="94"/>
+<text x="-7.62" y="-2.54" size="1.778" layer="95" rot="R90">&gt;NAME</text>
+<text x="7.62" y="5.08" size="1.778" layer="96" rot="R270">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="BOLT_ON_CONNECTOR" prefix="J" uservalue="yes">
+<description>Bolt on connector, where you connect two conductors via a screw and ring terminal arrangement.</description>
+<gates>
+<gate name="SCREW" symbol="SCREW_TERMINAL" x="0" y="0"/>
+<gate name="RING" symbol="RING_TERMINAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_1WAY" prefix="J">
+<description>Spade, 0.250", 1-way connector</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="0" y="0"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RELAY_NO" prefix="KR" uservalue="yes">
+<description>Generic normally open contact relay</description>
+<gates>
+<gate name="COIL" symbol="RELAY_COIL" x="-7.62" y="0"/>
+<gate name="CONTACT" symbol="SWITCH_NO" x="7.62" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADEF_250" prefix="J">
+<gates>
+<gate name="F" symbol="SPADEF_TERMINAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="MOTOR" prefix="M">
+<description>Generic motor</description>
+<gates>
+<gate name="G$1" symbol="MOTOR" x="0" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_4WAY" prefix="J">
+<description>Yazaki 4-way .250" spade connector, male housing has female receptacles and latching pin; female housing has male receptacles and latching hole.</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="0" y="10.16"/>
+<gate name="-2-F" symbol="SPADEF_TERMINAL" x="0" y="2.54"/>
+<gate name="-3-F" symbol="SPADEF_TERMINAL" x="0" y="-5.08"/>
+<gate name="-4-F" symbol="SPADEF_TERMINAL" x="0" y="-12.7"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="0" y="10.16"/>
+<gate name="-2-M" symbol="SPADEM_TERMINAL" x="0" y="2.54"/>
+<gate name="-3-M" symbol="SPADEM_TERMINAL" x="0" y="-5.08"/>
+<gate name="-4-M" symbol="SPADEM_TERMINAL" x="0" y="-12.7"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_2WAY" prefix="J">
+<description>Yazaki .250" or Hitachi .110" two-way spade connector.</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="0" y="2.54"/>
+<gate name="-2-F" symbol="SPADEF_TERMINAL" x="0" y="-5.08"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="0" y="2.54"/>
+<gate name="-2-M" symbol="SPADEM_TERMINAL" x="0" y="-5.08"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_5WAY" prefix="J">
+<description>Shindengen 2x.312" + 3x.250" spade connector as used on regulator-rectifiers.</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="0" y="12.7"/>
+<gate name="-3-F" symbol="SPADEF_TERMINAL" x="0" y="5.08"/>
+<gate name="-4-F" symbol="SPADEF_TERMINAL" x="0" y="-5.08"/>
+<gate name="-5-F" symbol="SPADEF_TERMINAL" x="0" y="-12.7"/>
+<gate name="-6-F" symbol="SPADEF_TERMINAL" x="0" y="-20.32"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="0" y="12.7"/>
+<gate name="-3-M" symbol="SPADEM_TERMINAL" x="0" y="5.08"/>
+<gate name="-4-M" symbol="SPADEM_TERMINAL" x="0" y="-5.08"/>
+<gate name="-5-M" symbol="SPADEM_TERMINAL" x="0" y="-12.7"/>
+<gate name="-6-M" symbol="SPADEM_TERMINAL" x="0" y="-20.32"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_3WAY" prefix="J">
+<description>Yazaki/Hitachi 3-way spade connector</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="0" y="7.62"/>
+<gate name="-2-F" symbol="SPADEF_TERMINAL" x="0" y="0"/>
+<gate name="-3-F" symbol="SPADEF_TERMINAL" x="0" y="-7.62"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="0" y="7.62"/>
+<gate name="-2-M" symbol="SPADEM_TERMINAL" x="0" y="0"/>
+<gate name="-3-M" symbol="SPADEM_TERMINAL" x="0" y="-7.62"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_NO" prefix="K" uservalue="yes">
+<description>Generic SPST switch</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_NO" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LAMP" prefix="B" uservalue="yes">
+<description>Indicator lamp</description>
+<gates>
+<gate name="G$1" symbol="LAMP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="3PHASE_ALTERNATOR" prefix="G">
+<description>3-Phase Alternator (AC Generator) as found on motorbikes.</description>
+<gates>
+<gate name="G$1" symbol="3PHASE_ALTERNATOR" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="DC_GENERATOR" prefix="G">
+<description>Integrated 3-phase Alternator + Rectifier + Regulator as found on cars.</description>
+<gates>
+<gate name="G$1" symbol="DC_GENERATOR" x="7.62" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RELAY_NC" prefix="KR" uservalue="yes">
+<description>Generic normally closed contact relay</description>
+<gates>
+<gate name="COIL" symbol="RELAY_COIL" x="-7.62" y="0"/>
+<gate name="CONTACT" symbol="SWITCH_NC" x="7.62" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_9WAY" prefix="J">
+<description>Generic 9-position connector</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="-2.54" y="40.64"/>
+<gate name="-2-F" symbol="SPADEF_TERMINAL" x="-2.54" y="30.48"/>
+<gate name="-3-F" symbol="SPADEF_TERMINAL" x="-2.54" y="20.32"/>
+<gate name="-4-F" symbol="SPADEF_TERMINAL" x="-2.54" y="10.16"/>
+<gate name="-5-F" symbol="SPADEF_TERMINAL" x="-2.54" y="0"/>
+<gate name="-6-F" symbol="SPADEF_TERMINAL" x="-2.54" y="-10.16"/>
+<gate name="-7-F" symbol="SPADEF_TERMINAL" x="-2.54" y="-20.32"/>
+<gate name="-8-F" symbol="SPADEF_TERMINAL" x="-2.54" y="-30.48"/>
+<gate name="-9-F" symbol="SPADEF_TERMINAL" x="-2.54" y="-40.64"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="0" y="40.64"/>
+<gate name="-2-M" symbol="SPADEM_TERMINAL" x="0" y="30.48"/>
+<gate name="-3-M" symbol="SPADEM_TERMINAL" x="0" y="20.32"/>
+<gate name="-4-M" symbol="SPADEM_TERMINAL" x="0" y="10.16"/>
+<gate name="-5-M" symbol="SPADEM_TERMINAL" x="0" y="0"/>
+<gate name="-6-M" symbol="SPADEM_TERMINAL" x="0" y="-10.16"/>
+<gate name="-7-M" symbol="SPADEM_TERMINAL" x="0" y="-20.32"/>
+<gate name="-8-M" symbol="SPADEM_TERMINAL" x="0" y="-30.48"/>
+<gate name="-9-M" symbol="SPADEM_TERMINAL" x="0" y="-40.64"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_IGNITION_P" prefix="K" uservalue="yes">
+<description>Ignition switch with a park position, as found on EU motorbikes.</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_KEY" x="-15.24" y="0" addlevel="always"/>
+<gate name="PARK" symbol="SWITCH_SPST" x="0" y="0"/>
+<gate name="MAIN" symbol="SWITCH_NO" x="12.7" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_SPST" prefix="K" uservalue="yes">
+<description>Generic SPST switch ON-ON</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_SPST" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_SPDT" prefix="K" uservalue="yes">
+<description>Generic SPDT switch</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_SPDT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_SPTT" prefix="K" uservalue="yes">
+<description>Generic SPTT switch as used on motorcycles for master lights.</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_SPTT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RELAY_TIME" prefix="KR" uservalue="yes">
+<description>Timed relay, as used in automotive signal indicators.</description>
+<gates>
+<gate name="G$1" symbol="RELAY_TIME" x="0" y="7.62" addlevel="must"/>
+<gate name="CONTACT" symbol="SWITCH_NO" x="15.24" y="10.16"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_NC" prefix="K" uservalue="yes">
+<description>Generic NC switch.</description>
+<gates>
+<gate name="G$1" symbol="SWITCH_NC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="REGULATOR_RECTIFIER" prefix="IC" uservalue="yes">
+<description>Generic 3-phase AC to 12V DC integrated regulator-rectifier as common on Japanese motorbikes.</description>
+<gates>
+<gate name="-RECTIFIER" symbol="3PHASE_RECTIFIER" x="7.62" y="0"/>
+<gate name="-REGULATOR" symbol="DC_REGULATOR" x="-10.16" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SWITCH_IGNITION_P_TCI" prefix="K" uservalue="yes">
+<description>Ignition switch with a park position and TCI enable circuit, as found on EU motorbikes.</description>
+<gates>
+<gate name="-MAIN" symbol="SWITCH_SPTT" x="-7.62" y="-2.54"/>
+<gate name="-PARK" symbol="SWITCH_SPDT" x="7.62" y="-2.54"/>
+<gate name="-TCI_ENABLE" symbol="SWITCH_NO" x="17.78" y="-2.54"/>
+<gate name="G$1" symbol="SWITCH_KEY" x="-17.78" y="-2.54" addlevel="always"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SPADE_6WAY" prefix="J">
+<description>Yazaki 4-way .250" spade connector, male housing has female receptacles and latching pin; female housing has male receptacles and latching hole.</description>
+<gates>
+<gate name="-1-F" symbol="SPADEF_TERMINAL" x="-7.62" y="40.64"/>
+<gate name="-2-F" symbol="SPADEF_TERMINAL" x="-7.62" y="30.48"/>
+<gate name="-3-F" symbol="SPADEF_TERMINAL" x="-7.62" y="20.32"/>
+<gate name="-4-F" symbol="SPADEF_TERMINAL" x="-7.62" y="10.16"/>
+<gate name="-5-F" symbol="SPADEF_TERMINAL" x="-7.62" y="0"/>
+<gate name="-6-F" symbol="SPADEF_TERMINAL" x="-7.62" y="-10.16"/>
+<gate name="-1-M" symbol="SPADEM_TERMINAL" x="-5.08" y="40.64"/>
+<gate name="-2-M" symbol="SPADEM_TERMINAL" x="-5.08" y="30.48"/>
+<gate name="-3-M" symbol="SPADEM_TERMINAL" x="-5.08" y="20.32"/>
+<gate name="-4-M" symbol="SPADEM_TERMINAL" x="-5.08" y="10.16"/>
+<gate name="-5-M" symbol="SPADEM_TERMINAL" x="-5.08" y="0"/>
+<gate name="-6-M" symbol="SPADEM_TERMINAL" x="-5.08" y="-10.16"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+</drawing>
+</eagle>

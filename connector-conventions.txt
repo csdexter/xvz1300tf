@@ -1,0 +1,7 @@
+Yazaki (.250" blade connector), Hitachi (.110" blade connector) and
+Sumitomo (.096" sealed connector) convention:
+- looking into the male part (which has female terminals), with the
+locking device on top
+- top to bottom, left to right
+- across, then down
+- pin 1 is top-left

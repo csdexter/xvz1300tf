@@ -1,36 +1,37 @@
-# Ignore list for Eagle, a PCB layout tool
+# Eagle so-called project file (does not contain any project information)
+*.epf
+# Eagle description file
+DESCRIPTION
 
-# Backup files
-*.s#?
-*.b#?
-*.l#?
+# Eagle backup-on-save
+*.[lbs]#[#1-9]
 
-# Eagle project file
-# It contains a serial number and references to the file structure
-# on your computer.
-# comment the following line if you want to have your project file included.
-eagle.epf
+# Generated Specctra interface files
+*.dsn
+*.scr
 
-# CAM files
-*.$$$
-*.cmp
-*.ly2
-*.l15
-*.sol
-*.plc
-*.stc
-*.sts
-*.crc
-*.crs
-
+## Manufacturing files
+# Drill & Outline (for automated de-panelizing)
+*.do
+# Drill rack
 *.dri
-*.drl
+# Aperture wheel
 *.gpi
-*.pls
+# Gerber
+*.GTL
+*.GBL
+*.GTS
+*.GBS
+*.GTP
+*.GBP
+*.GTO
+*.GBO
+*.GML
+# Excellon
+*.TXT
 
-*.drd
-*.drd.*
+# Eagle auto-router statistics
+*.pro
 
-*.info
-
-*.eps
+# Eagle design rules dumps
+*.dru
